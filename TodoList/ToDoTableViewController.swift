@@ -55,6 +55,9 @@ class ToDoTableViewController: UITableViewController {
                 cell.textLabel?.text = name
             }
         }
+        if let data = selectedToDo.image{
+            cell.imageView?.image = UIImage(data:data)
+        }
         return cell
     }
     
@@ -82,17 +85,20 @@ class ToDoTableViewController: UITableViewController {
     }
     */
 
-    /*
+    }
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+            if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                let selectedToDo = toDoCDs[indexPath.row]
+                context.delete(selectedToDo)
+                (UIApplication.shared.delegate as?
+                    AppDelegate)?.saveContext()
+                getToDos()
+            }
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -111,7 +117,7 @@ class ToDoTableViewController: UITableViewController {
 
     
     // MARK: - Navigation
-    }
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let addToDoViewController = segue.destination as? AddToDoViewController{

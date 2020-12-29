@@ -97,13 +97,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOc-WH-s2R">
-                                <rect key="frame" x="10" y="401" width="394" height="20.5"/>
+                                <rect key="frame" x="10" y="251" width="394" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7ZL-qj-QRQ">
-                                <rect key="frame" x="10" y="471.5" width="394" height="32"/>
+                                <rect key="frame" x="10" y="321.5" width="394" height="32"/>
                                 <segments>
                                     <segment title="None"/>
                                     <segment title="❗️"/>
@@ -111,37 +111,60 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txk-BG-WNB">
-                                <rect key="frame" x="10" y="579.5" width="394" height="30"/>
+                                <rect key="frame" x="10" y="402.5" width="394" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addTapped:" destination="TLy-2t-gBe" eventType="touchUpInside" id="ws0-OB-hOP"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Describe item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ihe-oe-RE2">
-                                <rect key="frame" x="10" y="313" width="394" height="34"/>
+                                <rect key="frame" x="10" y="163" width="394" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NU9-lB-llE">
+                                <rect key="frame" x="50" y="499" width="314" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NU9-lB-llE" secondAttribute="height" multiplier="1:1" id="wJJ-2R-1Z6"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D6b-uo-gkJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="txk-BG-WNB" firstAttribute="leading" secondItem="D6b-uo-gkJ" secondAttribute="leading" constant="10" id="16u-ql-n45"/>
-                            <constraint firstItem="txk-BG-WNB" firstAttribute="top" secondItem="7ZL-qj-QRQ" secondAttribute="bottom" constant="77" id="9Cj-Ll-IFr"/>
+                            <constraint firstItem="txk-BG-WNB" firstAttribute="top" secondItem="7ZL-qj-QRQ" secondAttribute="bottom" constant="50" id="9Cj-Ll-IFr"/>
                             <constraint firstItem="pOc-WH-s2R" firstAttribute="leading" secondItem="D6b-uo-gkJ" secondAttribute="leading" constant="10" id="BCM-9U-EWT"/>
+                            <constraint firstItem="NU9-lB-llE" firstAttribute="leading" secondItem="D6b-uo-gkJ" secondAttribute="leading" constant="50" id="LeT-0M-15o"/>
+                            <constraint firstItem="D6b-uo-gkJ" firstAttribute="trailing" secondItem="NU9-lB-llE" secondAttribute="trailing" constant="50" id="N86-eb-u6A"/>
                             <constraint firstItem="D6b-uo-gkJ" firstAttribute="trailing" secondItem="7ZL-qj-QRQ" secondAttribute="trailing" constant="10" id="ONa-tx-EEA"/>
                             <constraint firstItem="Ihe-oe-RE2" firstAttribute="leading" secondItem="D6b-uo-gkJ" secondAttribute="leading" constant="10" id="PQN-bQ-Pnv"/>
                             <constraint firstItem="7ZL-qj-QRQ" firstAttribute="top" secondItem="pOc-WH-s2R" secondAttribute="bottom" constant="50" id="X7o-Kq-7KW"/>
                             <constraint firstItem="D6b-uo-gkJ" firstAttribute="trailing" secondItem="txk-BG-WNB" secondAttribute="trailing" constant="10" id="YWh-o2-1MI"/>
                             <constraint firstItem="7ZL-qj-QRQ" firstAttribute="leading" secondItem="D6b-uo-gkJ" secondAttribute="leading" constant="10" id="f9d-gy-cZv"/>
-                            <constraint firstItem="Ihe-oe-RE2" firstAttribute="top" secondItem="D6b-uo-gkJ" secondAttribute="top" constant="225" id="fzE-97-xYO"/>
+                            <constraint firstItem="Ihe-oe-RE2" firstAttribute="top" secondItem="D6b-uo-gkJ" secondAttribute="top" constant="75" id="fzE-97-xYO"/>
                             <constraint firstItem="D6b-uo-gkJ" firstAttribute="trailing" secondItem="Ihe-oe-RE2" secondAttribute="trailing" constant="10" id="jtg-nS-rTC"/>
                             <constraint firstItem="pOc-WH-s2R" firstAttribute="top" secondItem="Ihe-oe-RE2" secondAttribute="bottom" constant="54" id="oEI-ax-odx"/>
                             <constraint firstItem="D6b-uo-gkJ" firstAttribute="trailing" secondItem="pOc-WH-s2R" secondAttribute="trailing" constant="10" id="wJe-N3-uhs"/>
+                            <constraint firstItem="NU9-lB-llE" firstAttribute="top" secondItem="txk-BG-WNB" secondAttribute="bottom" constant="66.5" id="zi9-PN-YRi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="JNr-je-QZE"/>
+                    <navigationItem key="navigationItem" id="JNr-je-QZE">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="vLG-GD-efL">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="TLy-2t-gBe" id="Rxs-OV-Tta"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="jbB-HV-KVQ">
+                                <connections>
+                                    <action selector="mediaFolderTapped:" destination="TLy-2t-gBe" id="8ob-K6-c5I"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
+                        <outlet property="imageView" destination="NU9-lB-llE" id="zhB-xe-lf0"/>
                         <outlet property="nameTextField" destination="Ihe-oe-RE2" id="1Uq-n8-f5E"/>
                         <outlet property="prioritySegment" destination="7ZL-qj-QRQ" id="0K8-qE-xCq"/>
                     </connections>
